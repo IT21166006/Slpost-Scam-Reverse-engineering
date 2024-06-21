@@ -1,0 +1,145 @@
+/* =FlexSlider Core Styles
+-------------------------------------------------------------- */
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* Necessary Styles */
+.flexslider {width: 100%; margin: 0; padding: 0;}
+.flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {max-width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* =Theme Blvd News Scroller
+-------------------------------------------------------------- */
+
+/* Primary Design */
+.themeblvd-news-scroller {
+	font-size: 12px;
+	padding: 0 0 28px 0; /* Matches height of scroller-nav */
+	position: relative;
+}
+.themeblvd-news-scroller ul.slides li,
+.widget .themeblvd-news-scroller ul.slides li {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+/* Navigation */
+.themeblvd-news-scroller .scroller-nav {
+	background: #f2f2f2;
+	color: #666666;
+	display: none;
+	height: 28px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+}
+.themeblvd-news-scroller .scroller-nav span {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 11px;
+	font-style: italic;
+	line-height: 28px; /* Matches height of scroller-nav */
+	padding: 0 10px;
+}
+.widget .themeblvd-news-scroller .flex-direction-nav,
+.themeblvd-news-scroller .scroller-nav .flex-direction-nav {
+	border: none;
+	float: right;
+	padding: 6px 5px;
+}
+.widget .themeblvd-news-scroller .flex-direction-nav li,
+.themeblvd-news-scroller .flex-direction-nav li {
+	border: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.widget .themeblvd-news-scroller .flex-direction-nav li a,
+.themeblvd-news-scroller .flex-direction-nav li a {
+	display: block;
+	background-image: url(images/arrows.png);
+	border: none;
+	padding: 0;
+	margin: 0 1px;	
+	width: 15px;
+	height: 15px;
+	text-indent: -9999px;
+}
+.widget .themeblvd-news-scroller .flex-direction-nav li a:hover,
+.themeblvd-news-scroller .flex-direction-nav li a:hover {
+	background-color: transparent;
+}
+.themeblvd-news-scroller .scroller-nav-horizontal li a.prev,
+.themeblvd-news-scroller .scroller-nav-fade li a.prev,
+.themeblvd-news-scroller .scroller-nav-horizontal li a.flex-prev,
+.themeblvd-news-scroller .scroller-nav-fade li a.flex-prev {
+	background-position: 0 0;
+}
+.themeblvd-news-scroller .scroller-nav-horizontal li a.next,
+.themeblvd-news-scroller .scroller-nav-fade li a.next,
+.themeblvd-news-scroller .scroller-nav-horizontal li a.flex-next,
+.themeblvd-news-scroller .scroller-nav-fade li a.flex-next {
+	background-position: -16px 0;
+}
+.themeblvd-news-scroller .scroller-nav-vertical li a.prev,
+.themeblvd-news-scroller .scroller-nav-vertical li a.flex-prev {
+	background-position: 0 -16px;
+}
+.themeblvd-news-scroller .scroller-nav-vertical li a.next,
+.themeblvd-news-scroller .scroller-nav-vertical li a.flex-next {
+	background-position: -16px -16px;
+}
+.themeblvd-news-scroller .scroller-nav li a.prev:hover,
+.themeblvd-news-scroller .scroller-nav li a.next:hover,
+.themeblvd-news-scroller .scroller-nav li a.flex-prev:hover,
+.themeblvd-news-scroller .scroller-nav li a.flex-next:hover {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+}
+/* Post Content */
+.themeblvd-news-scroller .scroller-wrap {
+	padding: 0 5px 5px 5px;
+}
+.themeblvd-news-scroller h4 {
+	margin-top: 0 !important; /* Fixes a bug in Flexlsider vertical slide. Must have NO margin on top. */
+}
+.themeblvd-news-scroller h4 a,
+.widget .themeblvd-news-scroller ul li h4 a {
+	border: 0;
+	display: inline;
+	padding: 0;
+	text-decoration: none;
+}
+.themeblvd-news-scroller h4 a:hover,
+.widget .themeblvd-news-scroller ul li h4 a:hover {
+	background-color: transparent;
+}
+.themeblvd-news-scroller .scroller-image {
+	margin: 10px 0;
+}
+.themeblvd-news-scroller p {
+	margin: 0 0 5px 0;
+}
+.themeblvd-news-scroller .scroller-date {
+	display: none;
+}
